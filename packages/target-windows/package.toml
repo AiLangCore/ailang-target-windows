@@ -1,0 +1,20 @@
+schema = "ailang.package-source.v1"
+name = "target-windows"
+version = "0.0.1-alpha.1"
+types = ["target", "tool", "template"]
+
+[targets.windows]
+id = "windows"
+description = "Windows executable and app package target"
+runtime = "aivm"
+profile = "windows-desktop"
+aliases = ["win32", "win64"]
+defaultRunner = "run"
+artifactTypes = ["exe", "dir", "msi", "msix"]
+options = ["arch", "app-id", "signing-certificate"]
+
+[targets.windows.tools]
+run = []
+publish = []
+doctor = []
+flash = []
